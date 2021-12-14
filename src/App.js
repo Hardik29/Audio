@@ -1,8 +1,8 @@
 import './App.css';
-import { useState,useRef} from 'react';
+import { useState} from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Forms from './components/Forms';
-import AudioPlayc from './components/AudioPlayc';
+import AudioPlay from './components/AudioPlay';
 
 function App() {
  const [audio, setaudio] = useState(null);
@@ -19,7 +19,7 @@ return (
               <Forms audioFile={audioFile}/>
             </Route>
             <Route path='/play-audio'>
-                    <AudioPlayc audioFile={audio} />
+                    <AudioPlay audioFile={audio} />
             </Route>
       </Switch>
 </Router>
